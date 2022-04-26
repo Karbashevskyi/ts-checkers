@@ -1,7 +1,7 @@
 
 /**
  *
- * @param value
+ * @param value is any type
  */
 export function isNull(value: any): boolean {
     return [null, 'null'].includes(value);
@@ -9,7 +9,7 @@ export function isNull(value: any): boolean {
 
 /**
  *
- * @param value
+ * @param value is any type
  */
 export function isUndefined(value: any): boolean {
     return [undefined, 'undefined'].includes(value);
@@ -17,7 +17,7 @@ export function isUndefined(value: any): boolean {
 
 /**
  *
- * @param value
+ * @param value is any type
  */
 export function isNullOrUndefined(value: any): boolean {
     return isNull(value) || isUndefined(value);
@@ -25,7 +25,7 @@ export function isNullOrUndefined(value: any): boolean {
 
 /**
  *
- * @param value
+ * @param value is any type
  */
 export function isNotNullOrUndefined(value: any): boolean {
     return !isNullOrUndefined(value);
@@ -33,7 +33,7 @@ export function isNotNullOrUndefined(value: any): boolean {
 
 /**
  *
- * @param value
+ * @param value is any type
  */
 export function isNumber(value: any): boolean {
     return typeof value === 'number' && !isNaN(value);
@@ -41,7 +41,7 @@ export function isNumber(value: any): boolean {
 
 /**
  *
- * @param value
+ * @param value is any type
  */
 export function isNotNumber(value: any): boolean {
     return !isNumber(value);
@@ -49,7 +49,7 @@ export function isNotNumber(value: any): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is any type
  */
 export function universalEmptyChecker(value: any): boolean {
 
@@ -71,7 +71,7 @@ export function universalEmptyChecker(value: any): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is object type
  */
 export function isEmptyObject(value: object): boolean {
     return universalEmptyChecker(value);
@@ -79,7 +79,7 @@ export function isEmptyObject(value: object): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is object type
  */
 export function isNotEmptyObject(value: object): boolean {
     return !isEmptyObject(value);
@@ -87,7 +87,7 @@ export function isNotEmptyObject(value: object): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is string type
  */
 export function isEmptyString(value: string): boolean {
     return universalEmptyChecker(value);
@@ -95,7 +95,7 @@ export function isEmptyString(value: string): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is string type
  */
 export function isNotEmptyString(value: string): boolean {
     return !isEmptyString(value);
@@ -103,7 +103,7 @@ export function isNotEmptyString(value: string): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is any type
  */
 export function isNullOrUndefinedOrEmpty(value: any): boolean {
     return universalEmptyChecker(value);
@@ -111,7 +111,7 @@ export function isNullOrUndefinedOrEmpty(value: any): boolean {
 
 /**
  * TODO add test
- * @param value
+ * @param value is any type
  */
 export function isNotNullOrUndefinedOrEmpty(value: any): boolean {
     return !isNullOrUndefinedOrEmpty(value);
@@ -119,7 +119,7 @@ export function isNotNullOrUndefinedOrEmpty(value: any): boolean {
 
 /**
  * TODO add test
- * @param enabled
+ * @param enabled is boolean type
  */
 export function isNotFalse(enabled: boolean): boolean {
     return enabled !== false;
@@ -127,8 +127,8 @@ export function isNotFalse(enabled: boolean): boolean {
 
 /**
  * TODO add test
- * @param objectOne
- * @param objectTwo
+ * @param objectOne is generic type
+ * @param objectTwo is generic type
  */
 export function isNotCompare<T>(objectOne: T, objectTwo: T): boolean {
 
@@ -138,8 +138,8 @@ export function isNotCompare<T>(objectOne: T, objectTwo: T): boolean {
 
 /**
  * TODO add test
- * @param objectOne
- * @param objectTwo
+ * @param objectOne is generic type
+ * @param objectTwo is generic type
  */
 export function isCompare<T>(objectOne: T, objectTwo: T): boolean {
 

@@ -3,85 +3,86 @@
 ```typescript
 /**
  *
- * @param value
+ * @param value is any type
  */
-declare function isNull(value: any): boolean;
+export declare function isNull(value: any): boolean;
 /**
  *
- * @param value
+ * @param value is any type
  */
-declare function isUndefined(value: any): boolean;
+export declare function isUndefined(value: any): boolean;
 /**
  *
- * @param value
+ * @param value is any type
  */
-declare function isNullOrUndefined(value: any): boolean;
+export declare function isNullOrUndefined(value: any): boolean;
 /**
  *
- * @param value
+ * @param value is any type
  */
-declare function isNotNullOrUndefined(value: any): boolean;
+export declare function isNotNullOrUndefined(value: any): boolean;
 /**
  *
- * @param value
+ * @param value is any type
  */
-declare function isNumber(value: any): boolean;
+export declare function isNumber(value: any): boolean;
 /**
  *
- * @param value
+ * @param value is any type
  */
-declare function isMotNumber(value: any): boolean;
+export declare function isNotNumber(value: any): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is any type
  */
-declare function universalEmptyChecker(value: any): boolean;
+export declare function universalEmptyChecker(value: any): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is object type
  */
-declare function isEmptyObject(value: object): boolean;
+export declare function isEmptyObject(value: object): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is object type
  */
-declare function isNotEmptyObject(value: object): boolean;
+export declare function isNotEmptyObject(value: object): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is string type
  */
-declare function isEmptyString(value: string): boolean;
+export declare function isEmptyString(value: string): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is string type
  */
-declare function isNotEmptyString(value: string): boolean;
+export declare function isNotEmptyString(value: string): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is any type
  */
-declare function isNullOrUndefinedOrEmpty(value: any): boolean;
+export declare function isNullOrUndefinedOrEmpty(value: any): boolean;
 /**
- *
- * @param value
+ * TODO add test
+ * @param value is any type
  */
-declare function isNotNullOrUndefinedOrEmpty(value: any): boolean;
+export declare function isNotNullOrUndefinedOrEmpty(value: any): boolean;
 /**
- *
- * @param enabled
+ * TODO add test
+ * @param enabled is boolean type
  */
-declare function isNotFalse(enabled: boolean): boolean;
+export declare function isNotFalse(enabled: boolean): boolean;
 /**
- *
- * @param objectOne
- * @param objectTwo
+ * TODO add test
+ * @param objectOne is generic type
+ * @param objectTwo is generic type
  */
-declare function isNotCompare<T>(objectOne: T, objectTwo: T): boolean;
+export declare function isNotCompare<T>(objectOne: T, objectTwo: T): boolean;
 /**
- *
- * @param objectOne
- * @param objectTwo
+ * TODO add test
+ * @param objectOne is generic type
+ * @param objectTwo is generic type
  */
-declare function isCompare<T>(objectOne: T, objectTwo: T): boolean;
+export declare function isCompare<T>(objectOne: T, objectTwo: T): boolean;
+
 
 ```
