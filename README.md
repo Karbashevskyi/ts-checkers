@@ -1,68 +1,87 @@
-# package-ts-decorators-asserts
-Package with decorators in typescript language.
+# ts-checkers
 
-Import
 ```typescript
-import {ArgumentsIsNotNullOrUndefined} from "package-ts-decorators-asserts";
-```
-
-Enum for type of showing error or ignore.
-```typescript
-export enum TypeOfErrorEnum {
-    IGNORE,
-    THROW,
-    CONSOLE,
-}
-```
-
-Interface for configuration decorator
-```typescript
-export interface IConfig {
-    count?: number;
-    typeOfError?: TypeOfErrorEnum;
-    itemCheckedList?: any[]; // Default is [undefined, null]
-}
-```
-
-Example for using
-```typescript
-  class Model {
-
-    @ArgumentsIsNotNullOrUndefined()
-    testMethod(argumentOne: string, argumentTwo: number, argumentThree: []) {
-        return argumentOne;
-    }
-
-    @ArgumentsIsNotNullOrUndefined({
-        count: 2 // Check only argumentOne and argumentTwo
-    })
-    testMethodTwo(argumentOne: string, argumentTwo: number, argumentThree?: []) {
-        return argumentOne;
-    }
-
-    @ArgumentsIsNotNullOrUndefined({
-        count: 1 // Check only argumentOne
-    })
-    testMethodThree(argumentOne: string, argumentTwo?: number, argumentThree?: []) {
-        return argumentOne;
-    }
-
-    @ArgumentsIsNotNullOrUndefined({
-        count: 1, // Check only argumentOne
-        typeOfError: TypeOfErrorEnum.IGNORE // Not showing error
-    })
-    testMethodFour(argumentOne: string, argumentTwo: number, argumentThree?: []) {
-        return argumentOne;
-    }
-
-    @ArgumentsIsNotNullOrUndefined({
-        count: 2, // Check only argumentOne and argumentTwo
-        typeOfError: TypeOfErrorEnum.CONSOLE // Showing error in console
-    })
-    testMethodFive(argumentOne: string, argumentTwo: number, argumentThree?: []) {
-        return argumentOne;
-    }
-
-}
+/**
+ *
+ * @param value
+ */
+declare function isNull(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isUndefined(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNullOrUndefined(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNotNullOrUndefined(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNumber(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isMotNumber(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function universalEmptyChecker(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isEmptyObject(value: object): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNotEmptyObject(value: object): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isEmptyString(value: string): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNotEmptyString(value: string): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNullOrUndefinedOrEmpty(value: any): boolean;
+/**
+ *
+ * @param value
+ */
+declare function isNotNullOrUndefinedOrEmpty(value: any): boolean;
+/**
+ *
+ * @param enabled
+ */
+declare function isNotFalse(enabled: boolean): boolean;
+/**
+ *
+ * @param objectOne
+ * @param objectTwo
+ */
+declare function isNotCompare<T>(objectOne: T, objectTwo: T): boolean;
+/**
+ *
+ * @param objectOne
+ * @param objectTwo
+ */
+declare function isCompare<T>(objectOne: T, objectTwo: T): boolean;
 
 ```

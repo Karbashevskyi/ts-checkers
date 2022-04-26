@@ -43,12 +43,12 @@ export function isNumber(value: any): boolean {
  *
  * @param value
  */
-export function isMotNumber(value: any): boolean {
+export function isNotNumber(value: any): boolean {
     return !isNumber(value);
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function universalEmptyChecker(value: any): boolean {
@@ -70,7 +70,7 @@ export function universalEmptyChecker(value: any): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function isEmptyObject(value: object): boolean {
@@ -78,7 +78,7 @@ export function isEmptyObject(value: object): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function isNotEmptyObject(value: object): boolean {
@@ -86,7 +86,7 @@ export function isNotEmptyObject(value: object): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function isEmptyString(value: string): boolean {
@@ -94,7 +94,7 @@ export function isEmptyString(value: string): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function isNotEmptyString(value: string): boolean {
@@ -102,7 +102,7 @@ export function isNotEmptyString(value: string): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function isNullOrUndefinedOrEmpty(value: any): boolean {
@@ -110,7 +110,7 @@ export function isNullOrUndefinedOrEmpty(value: any): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param value
  */
 export function isNotNullOrUndefinedOrEmpty(value: any): boolean {
@@ -118,7 +118,7 @@ export function isNotNullOrUndefinedOrEmpty(value: any): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param enabled
  */
 export function isNotFalse(enabled: boolean): boolean {
@@ -126,7 +126,7 @@ export function isNotFalse(enabled: boolean): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param objectOne
  * @param objectTwo
  */
@@ -137,7 +137,7 @@ export function isNotCompare<T>(objectOne: T, objectTwo: T): boolean {
 }
 
 /**
- *
+ * TODO add test
  * @param objectOne
  * @param objectTwo
  */
