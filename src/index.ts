@@ -11,8 +11,24 @@ export class Is {
    *
    * @param value is any type
    */
+  public static notNull(value: any): boolean {
+    return !this.null(value);
+  }
+
+  /**
+   *
+   * @param value is any type
+   */
   public static undefined(value: any): boolean {
     return [undefined, 'undefined'].includes(value);
+  }
+
+  /**
+   *
+   * @param value is any type
+   */
+  public static notUndefined(value: any): boolean {
+    return !this.undefined(value);
   }
 
   /**

@@ -19,6 +19,20 @@ describe('Testing of decorator check-arguments', () => {
         expect(Is.null("unknown")).toBe(false);
     });
 
+    // Is.notNull
+
+    it('Is.notNull should be false for null', () => {
+        expect(Is.notNull(arrWithDataToTest[0])).toBe(false);
+    });
+
+    it('Is.notNull should be false for "null"', () => {
+        expect(Is.notNull(arrWithDataToTest[2])).toBe(false);
+    });
+
+    it('Is.notNull should be true for "unknown"', () => {
+        expect(Is.notNull("unknown")).toBe(true);
+    });
+
     // isUndefined
 
     it('Is.undefined should be true', () => {

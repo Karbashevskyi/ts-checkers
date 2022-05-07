@@ -8,7 +8,17 @@ export declare class Is {
      *
      * @param value is any type
      */
+    static notNull(value: any): boolean;
+    /**
+     *
+     * @param value is any type
+     */
     static undefined(value: any): boolean;
+    /**
+     *
+     * @param value is any type
+     */
+    static notUndefined(value: any): boolean;
     /**
      *
      * @param value is any type
