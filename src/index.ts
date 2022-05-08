@@ -1,5 +1,4 @@
 export class Is {
-
   /**
    * TODO add test
    * @param value is boolean type
