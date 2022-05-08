@@ -1,5 +1,25 @@
 export declare class Is {
     /**
+     * TODO add test
+     * @param value is boolean type
+     */
+    static false(value: boolean): boolean;
+    /**
+     * TODO add test
+     * @param value is boolean type
+     */
+    static notFalse(value: boolean): boolean;
+    /**
+     * TODO add test
+     * @param value is boolean type
+     */
+    static true(value: boolean): boolean;
+    /**
+     * TODO add test
+     * @param value is boolean type
+     */
+    static notTrue(value: boolean): boolean;
+    /**
      *
      * @param value is any type
      */
@@ -74,11 +94,6 @@ export declare class Is {
      * @param value is any type
      */
     static notNullOrUndefinedOrEmpty(value: any): boolean;
-    /**
-     * TODO add test
-     * @param enabled is boolean type
-     */
-    static notFalse(enabled: boolean): boolean;
     /**
      * TODO add test
      * @param objectOne is generic type
