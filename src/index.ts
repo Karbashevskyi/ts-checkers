@@ -1,4 +1,37 @@
 export class Is {
+
+  /**
+   * TODO add test
+   * @param value is boolean type
+   */
+  public static false(value: boolean): boolean {
+    return value === false;
+  }
+
+  /**
+   * TODO add test
+   * @param value is boolean type
+   */
+  public static notFalse(value: boolean): boolean {
+    return !this.false(value);
+  }
+
+  /**
+   * TODO add test
+   * @param value is boolean type
+   */
+  public static true(value: boolean): boolean {
+    return value === true;
+  }
+
+  /**
+   * TODO add test
+   * @param value is boolean type
+   */
+  public static notTrue(value: boolean): boolean {
+    return !this.true(value);
+  }
+
   /**
    *
    * @param value is any type
@@ -129,14 +162,6 @@ export class Is {
    */
   public static notNullOrUndefinedOrEmpty(value: any): boolean {
     return !this.nullOrUndefinedOrEmpty(value);
-  }
-
-  /**
-   * TODO add test
-   * @param enabled is boolean type
-   */
-  public static notFalse(enabled: boolean): boolean {
-    return enabled !== false;
   }
 
   /**
