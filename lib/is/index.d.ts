@@ -10,9 +10,7 @@ import { True } from './true';
 import { Undefined } from './undefined';
 import { UniversalEmptyChecker } from './universal-empty-checker';
 export declare const Is: {
-    Not: {
-        [k: string]: any;
-    };
+    Not: any;
     Compare: typeof Compare;
     EmptyObject: typeof EmptyObject;
     EmptyString: typeof EmptyString;
