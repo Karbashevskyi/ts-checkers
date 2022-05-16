@@ -8,99 +8,99 @@ describe('Testing of decorator check-arguments', () => {
     // isNull
 
     it('Is.null should be true', () => {
-        expect(Is.null(arrWithDataToTest[0])).toBe(true);
+        expect(Is.Null(arrWithDataToTest[0])).toBe(true);
     });
 
     it('Is.null should be true ("null")', () => {
-        expect(Is.null(arrWithDataToTest[2])).toBe(true);
+        expect(Is.Null(arrWithDataToTest[2])).toBe(true);
     });
 
     it('Is.null should be false ("unknown")', () => {
-        expect(Is.null("unknown")).toBe(false);
+        expect(Is.Null("unknown")).toBe(false);
     });
 
     // Is.notNull
 
     it('Is.notNull should be false for null', () => {
-        expect(Is.notNull(arrWithDataToTest[0])).toBe(false);
+        expect(Is.Not.Null(arrWithDataToTest[0])).toBe(false);
     });
 
     it('Is.notNull should be false for "null"', () => {
-        expect(Is.notNull(arrWithDataToTest[2])).toBe(false);
+        expect(Is.Not.Null(arrWithDataToTest[2])).toBe(false);
     });
 
     it('Is.notNull should be true for "unknown"', () => {
-        expect(Is.notNull("unknown")).toBe(true);
+        expect(Is.Not.Null("unknown")).toBe(true);
     });
 
     // isUndefined
 
     it('Is.undefined should be true', () => {
-        expect(Is.undefined(arrWithDataToTest[1])).toBe(true);
+        expect(Is.Undefined(arrWithDataToTest[1])).toBe(true);
     });
 
     it('Is.undefined should be true ("undefined")', () => {
-        expect(Is.undefined(arrWithDataToTest[3])).toBe(true);
+        expect(Is.Undefined(arrWithDataToTest[3])).toBe(true);
     });
 
     it('Is.undefined should be false ("unknown")', () => {
-        expect(Is.undefined("unknown")).toBe(false);
+        expect(Is.Undefined("unknown")).toBe(false);
     });
 
     // isNullOrUndefined
 
     it('Is.nullOrUndefined should be true (null)', () => {
-        expect(Is.nullOrUndefined(arrWithDataToTest[0])).toBe(true);
+        expect(Is.NullOrUndefined(arrWithDataToTest[0])).toBe(true);
     });
 
     it('Is.nullOrUndefined should be true (undefined)', () => {
-        expect(Is.nullOrUndefined(arrWithDataToTest[1])).toBe(true);
+        expect(Is.NullOrUndefined(arrWithDataToTest[1])).toBe(true);
     });
 
     it('Is.nullOrUndefined should be true ("null")', () => {
-        expect(Is.nullOrUndefined(arrWithDataToTest[2])).toBe(true);
+        expect(Is.NullOrUndefined(arrWithDataToTest[2])).toBe(true);
     });
 
     it('Is.nullOrUndefined should be true ("undefined")', () => {
-        expect(Is.nullOrUndefined(arrWithDataToTest[3])).toBe(true);
+        expect(Is.NullOrUndefined(arrWithDataToTest[3])).toBe(true);
     });
 
     //isNotNullOrUndefined
 
     it('Is.notNullOrUndefined should be false (null)', () => {
-        expect(Is.notNullOrUndefined(arrWithDataToTest[0])).toBe(false);
+        expect(Is.Not.NullOrUndefined(arrWithDataToTest[0])).toBe(false);
     });
 
     it('Is.notNullOrUndefined should be false (undefined)', () => {
-        expect(Is.notNullOrUndefined(arrWithDataToTest[1])).toBe(false);
+        expect(Is.Not.NullOrUndefined(arrWithDataToTest[1])).toBe(false);
     });
 
     it('Is.notNullOrUndefined should be false ("null")', () => {
-        expect(Is.notNullOrUndefined(arrWithDataToTest[2])).toBe(false);
+        expect(Is.Not.NullOrUndefined(arrWithDataToTest[2])).toBe(false);
     });
 
     it('Is.notNullOrUndefined should be false ("undefined")', () => {
-        expect(Is.notNullOrUndefined(arrWithDataToTest[3])).toBe(false);
+        expect(Is.Not.NullOrUndefined(arrWithDataToTest[3])).toBe(false);
     });
 
     // isNumber
 
     it('Is.number should be true (0)', () => {
-        expect(Is.number(0)).toBe(true);
+        expect(Is.Number(0)).toBe(true);
     });
 
     it('Is.number should be false ("0")', () => {
-        expect(Is.number("0")).toBe(false);
+        expect(Is.Number("0")).toBe(false);
     });
 
     // isNotNumber
 
     it('Is.notNumber should be false (0)', () => {
-        expect(Is.notNumber(0)).toBe(false);
+        expect(Is.Not.Number(0)).toBe(false);
     });
 
     it('Is.notNumber should be true ("0")', () => {
-        expect(Is.notNumber("0")).toBe(true);
+        expect(Is.Not.Number("0")).toBe(true);
     });
 
 });
