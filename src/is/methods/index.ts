@@ -14,17 +14,17 @@ import {UniversalEmptyChecker} from './universal-empty-checker';
  * Declare names and types of methods
  */
 export interface MethodsInterface {
-    Compare: Function;
-    EmptyObject: Function;
-    EmptyString: Function;
-    False: Function;
-    Null: Function;
-    NullOrUndefined: Function;
-    NullOrUndefinedOrEmpty: Function;
-    Number: Function;
-    True: Function;
-    Undefined: Function;
-    UniversalEmptyChecker: Function;
+    Compare:  typeof Compare;
+    EmptyObject: typeof EmptyObject;
+    EmptyString: typeof EmptyString;
+    False: typeof False;
+    Null: typeof Null;
+    NullOrUndefined: typeof NullOrUndefined;
+    NullOrUndefinedOrEmpty: typeof NullOrUndefinedOrEmpty;
+    Number: typeof Number;
+    True: typeof True;
+    Undefined: typeof Undefined;
+    UniversalEmptyChecker: typeof UniversalEmptyChecker;
 }
 
 /**
