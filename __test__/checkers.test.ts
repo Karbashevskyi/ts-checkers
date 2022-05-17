@@ -95,6 +95,10 @@ describe('Testing of decorator check-arguments', () => {
 
     // isNotNumber
 
+    it('Is.notNumber should be false (NaN)', () => {
+        expect(Is.Not.Number(NaN)).toBe(true);
+    });
+
     it('Is.notNumber should be false (0)', () => {
         expect(Is.Not.Number(0)).toBe(false);
     });

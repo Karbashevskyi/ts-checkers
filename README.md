@@ -1,100 +1,38 @@
 # ts-checkers
+## This is library can help you to check some data.
+- Where you can use it?
+  - In typescript or javascript.
+- What kind of data can the library check?
+  - Now is not more, but in the future the library will be growing.
+  - List: 
+    - Is.Compare()
+      - For compare two objects.
+    - Is.EmptyObject()
+    - Is.EmptyString()
+    - Is.False()
+    - Is.Null()
+      - Check if null or "null" is null.
+    - Is.NullOrUndefined()
+    - Is.NullOrUndefinedOrEmpty()
+    - Is.Number()
+    - Is.True()
+    - Is.Undefined()
+      - Check if undefined or "undefined" is undefined.
+    - Is.UniversalEmptyChecker()
+      - The method is used inside other methods.
+  - All the methods can be reverse result, just use prefix Not, Is.Not.Null().
 
+
+#Examples:
 ```typescript
-export declare class Is {
-    /**
-     *
-     * @param value is any type
-     */
-    static null(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static notNull(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static undefined(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static notUndefined(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static nullOrUndefined(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static notNullOrUndefined(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static number(value: any): boolean;
-    /**
-     *
-     * @param value is any type
-     */
-    static notNumber(value: any): boolean;
-    /**
-     * TODO add test
-     * @param value is any type
-     */
-    static universalEmptyChecker(value: any): boolean;
-    /**
-     * TODO add test
-     * @param value is object type
-     */
-    static emptyObject(value: object): boolean;
-    /**
-     * TODO add test
-     * @param value is object type
-     */
-    static notEmptyObject(value: object): boolean;
-    /**
-     * TODO add test
-     * @param value is string type
-     */
-    static emptyString(value: string): boolean;
-    /**
-     * TODO add test
-     * @param value is string type
-     */
-    static notEmptyString(value: string): boolean;
-    /**
-     * TODO add test
-     * @param value is any type
-     */
-    static nullOrUndefinedOrEmpty(value: any): boolean;
-    /**
-     * TODO add test
-     * @param value is any type
-     */
-    static notNullOrUndefinedOrEmpty(value: any): boolean;
-    /**
-     * TODO add test
-     * @param enabled is boolean type
-     */
-    static notFalse(enabled: boolean): boolean;
-    /**
-     * TODO add test
-     * @param objectOne is generic type
-     * @param objectTwo is generic type
-     */
-    static notCompare<T>(objectOne: T, objectTwo: T): boolean;
-    /**
-     * TODO add test
-     * @param objectOne is generic type
-     * @param objectTwo is generic type
-     */
-    static compare<T>(objectOne: T, objectTwo: T): boolean;
-}
 
+    Is.Null("unknown") // Return false
+    Is.Not.Null("unknown") // Return true
+    Is.Number(0) // Return true
+    Is.Number("0") // Return false
+    Is.Not.Number(0) // Return false
+    Is.Not.Number("0") // Return true
+    Is.Not.Number(NaN) // Return true
+    Is.Number(NaN) // Return false
 
 ```
