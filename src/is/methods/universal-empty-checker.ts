@@ -1,4 +1,5 @@
 import {NullOrUndefined} from './null-or-undefined';
+import {Methods} from './index';
 
 /**
  * TODO add test
@@ -9,7 +10,7 @@ export function UniversalEmptyChecker(value: any): boolean {
         return true;
     }
 
-    if (Number(value)) { // todo is.number
+    if (Methods.Number(value)) {
         value = true;
     } else {
         value = Object.keys(value)?.length;

@@ -1,5 +1,9 @@
 import {NullOrUndefined} from './null-or-undefined';
-import {Is} from './index';
+import {Is} from '../index';
+
+export enum TypeOfValueEnum {
+    object = 'object'
+}
 
 /**
  * TODO add test
@@ -24,7 +28,7 @@ export function Compare<T>(objectOne: T, objectTwo: T): boolean {
 
     for (const keyOfObjectOne of keysOfObjectTwo) {
         switch (typeof (objectOne as any)[keyOfObjectOne]) {
-            case 'object':
+            case TypeOfValueEnum.object:
                 if (Is.Not.Compare((objectOne as any)[keyOfObjectOne], (objectTwo as any)[keyOfObjectOne])) {
                     return false;
                 }

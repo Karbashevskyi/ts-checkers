@@ -1,43 +1,32 @@
-import {Compare} from './compare';
-import {EmptyObject} from './empty-object';
-import {EmptyString} from './empty-string';
-import {False} from './false';
-import {Null} from './null';
-import {NullOrUndefined} from './null-or-undefined';
-import {NullOrUndefinedOrEmpty} from './null-or-undefined-or-empty';
-import {Number} from './number';
-import {True} from './true';
-import {Undefined} from './undefined';
-import {UniversalEmptyChecker} from './universal-empty-checker';
+import {Methods, MethodsInterface} from './methods';
 
-const Methods = {
-    Compare: Compare,
-    EmptyObject: EmptyObject,
-    EmptyString: EmptyString,
-    False: False,
-    Null: Null,
-    NullOrUndefined: NullOrUndefined,
-    NullOrUndefinedOrEmpty: NullOrUndefinedOrEmpty,
-    Number: Number,
-    True: True,
-    Undefined: Undefined,
-    UniversalEmptyChecker: UniversalEmptyChecker,
-};
-
+/**
+ * Handler for reverse boolean result.
+ */
 const NotHandler: any = {
     apply(target: any, thisArg: any, args: any) {
-        console.log(`Property ${thisArg} has been read.`, target, args);
         return !target(...args);
     }
 };
 
-const arrayOfProxy: any = Object.keys(Methods).map((key: string) => {
+/**
+ * Map list of methods to array with proxy.
+ */
+const arrayOfProxy: any[][] = Object.keys(Methods).map((key: string) => {
     const proxy: any = new Proxy((Methods as any)[key], NotHandler);
     return [key, proxy];
 });
 
-const Not: any = Object.fromEntries(arrayOfProxy);
+/**
+ * Init const for reverse result of boolean.
+ */
+const Not: MethodsInterface = Object.fromEntries(arrayOfProxy) as MethodsInterface;
 
+/**
+ * Export all methods in Is object with Not object inside.
+ * If you need check if true is true, just use this: Is.True(value);
+ * If you need check if true is not true just use this: Is.Not.True(value);
+ */
 export const Is = {
     ...Methods,
     Not
