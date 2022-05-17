@@ -1,2 +1,1 @@
-export {Is} from './is/index'
-
+export { Is } from './is/index';

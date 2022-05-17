@@ -1,20 +1,20 @@
-import {Methods, MethodsInterface} from './methods';
+import { Methods, MethodsInterface } from './methods';
 
 /**
  * Handler for reverse boolean result.
  */
 const NotHandler: any = {
-    apply(target: any, thisArg: any, args: any) {
-        return !target(...args);
-    }
+  apply(target: any, thisArg: any, args: any) {
+    return !target(...args);
+  },
 };
 
 /**
  * Map list of methods to array with proxy.
  */
 const arrayOfProxy: any[][] = Object.keys(Methods).map((key: string) => {
-    const proxy: any = new Proxy((Methods as any)[key], NotHandler);
-    return [key, proxy];
+  const proxy: any = new Proxy((Methods as any)[key], NotHandler);
+  return [key, proxy];
 });
 
 /**
@@ -28,6 +28,6 @@ const Not: MethodsInterface = Object.fromEntries(arrayOfProxy) as MethodsInterfa
  * If you need check if true is not true just use this: Is.Not.True(value);
  */
 export const Is = {
-    ...Methods,
-    Not
+  ...Methods,
+  Not,
 };

@@ -3,5 +3,5 @@
  * @param value is boolean type
  */
 export function True(value: boolean): boolean {
-    return value === true;
+  return value === true;
 }
