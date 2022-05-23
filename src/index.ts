@@ -10,24 +10,36 @@ const NotHandler: any = {
 };
 
 /**
- * Map list of methods to array with proxy.
+ *
+ * @param object must by object with string key and any value
+ * @param item must by object with string key and any value
  */
-const arrayOfProxy: any[][] = Object.keys(Methods).map((key: string) => {
-  const proxy: any = new Proxy((Methods as any)[key], NotHandler);
-  return [key, proxy];
-});
+const reduce: any = (object: {[p: string]: any}, item: {[p: string]: any}) => {
+  return Object.assign(object, item);
+};
+
+/**
+ *
+ * @param key mu by string
+ */
+const map: any = (key: string) => {
+  return {[key]: new Proxy((Methods as any)[key], NotHandler)};
+};
 
 /**
  * Init const for reverse result of boolean.
  */
-const Not: MethodsInterface = Object.fromEntries(arrayOfProxy) as MethodsInterface;
+const Not: MethodsInterface = Object.keys(Methods).map(map).reduce(reduce, {}) as MethodsInterface;
+
+
+export type IsType = MethodsInterface & {Not: MethodsInterface};
 
 /**
  * Export all methods in Is object with Not object inside.
  * If you need check if true is true, just use this: Is.True(value);
  * If you need check if true is not true just use this: Is.Not.True(value);
  */
-export const Is = {
+export const Is: IsType = {
   ...Methods,
   Not,
 };
