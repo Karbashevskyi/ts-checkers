@@ -1,6 +1,8 @@
 import { MethodsInterface } from './methods';
+import { AllType } from "./proxyes/all.proxy";
 export declare type IsType = MethodsInterface & {
     Not: MethodsInterface;
+    All: AllType;
 };
 /**
  * Export all methods in Is object with Not object inside.

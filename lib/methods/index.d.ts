@@ -12,6 +12,7 @@ import { UniversalEmptyChecker } from './universal-empty-checker';
 import { Collection } from './collection';
 import { Structure } from './structure';
 import { String } from './string';
+import { Boolean } from './boolean';
 /**
  * Declare names and types of methods
  */

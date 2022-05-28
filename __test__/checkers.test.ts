@@ -1,7 +1,7 @@
 import {Is} from "../lib";
 
 
-describe('Testing of decorator check-arguments', () => {
+describe('Testing Is. and Is.Not', () => {
 
     const arrWithDataToTest: any[] = [null, undefined, 'null', 'undefined', 'test'];
 

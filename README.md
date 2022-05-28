@@ -40,7 +40,7 @@
   - All the methods can be reverse result, just use prefix Not, Is.Not.Null().
 
 
-#Examples:
+## Examples:
 ```typescript
 
     Is.Null("unknown") // Return false
@@ -51,6 +51,14 @@
     Is.Not.Number("0") // Return true
     Is.Not.Number(NaN) // Return true
     Is.Number(NaN) // Return false
+
+```
+
+## Now you can check array
+```typescript
+
+  Is.All.Boolean([true, false, [true, [false]], 0]) // Result is false beacouse in array exist 0
+  Is.All.Not.Boolean([true, false, [true, [false]], 0]) // Result is true beacouse in array exist 0
 
 ```
 
