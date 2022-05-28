@@ -107,4 +107,28 @@ describe('Testing of decorator check-arguments', () => {
         expect(Is.Not.Number("0")).toBe(true);
     });
 
+    // Is.Collection
+
+    it('Is.Collection should be true for []', () => {
+        expect(Is.Collection([])).toBe(true);
+    });
+
+    // Is.Not.Collection
+
+    it('Is.Not.Collection should be false for {}', () => {
+        expect(Is.Not.Collection({})).toBe(true);
+    });
+
+    // Is.Structure
+
+    it('Is.Structure should be true for {}', () => {
+        expect(Is.Structure({})).toBe(true);
+    });
+
+    // Is.Not.Structure
+
+    it('Is.Not.Structure should be false for []', () => {
+        expect(Is.Not.Structure([])).toBe(true);
+    });
+
 });

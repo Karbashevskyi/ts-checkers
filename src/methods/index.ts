@@ -9,11 +9,14 @@ import { Number } from './number';
 import { True } from './true';
 import { Undefined } from './undefined';
 import { UniversalEmptyChecker } from './universal-empty-checker';
+import { Collection } from './collection';
+import { Structure } from './structure';
 
 /**
  * Declare names and types of methods
  */
 export interface MethodsInterface {
+  Collection: typeof Collection;
   Compare: typeof Compare;
   EmptyObject: typeof EmptyObject;
   EmptyString: typeof EmptyString;
@@ -22,6 +25,7 @@ export interface MethodsInterface {
   NullOrUndefined: typeof NullOrUndefined;
   NullOrUndefinedOrEmpty: typeof NullOrUndefinedOrEmpty;
   Number: typeof Number;
+  Structure: typeof Structure;
   True: typeof True;
   Undefined: typeof Undefined;
   UniversalEmptyChecker: typeof UniversalEmptyChecker;
@@ -31,6 +35,7 @@ export interface MethodsInterface {
  * Export all accesses methods in library
  */
 export const Methods: MethodsInterface = {
+  Collection,
   Compare,
   EmptyObject,
   EmptyString,
@@ -39,6 +44,7 @@ export const Methods: MethodsInterface = {
   NullOrUndefined,
   NullOrUndefinedOrEmpty,
   Number,
+  Structure,
   True,
   Undefined,
   UniversalEmptyChecker,

@@ -14,7 +14,7 @@ const NotHandler: any = {
  * @param object must by object with string key and any value
  * @param item must by object with string key and any value
  */
-const reduce: any = (object: {[p: string]: any}, item: {[p: string]: any}) => {
+const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) => {
   return Object.assign(object, item);
 };
 
@@ -23,7 +23,7 @@ const reduce: any = (object: {[p: string]: any}, item: {[p: string]: any}) => {
  * @param key mu by string
  */
 const map: any = (key: string) => {
-  return {[key]: new Proxy((Methods as any)[key], NotHandler)};
+  return { [key]: new Proxy((Methods as any)[key], NotHandler) };
 };
 
 /**
@@ -31,8 +31,7 @@ const map: any = (key: string) => {
  */
 const Not: MethodsInterface = Object.keys(Methods).map(map).reduce(reduce, {}) as MethodsInterface;
 
-
-export type IsType = MethodsInterface & {Not: MethodsInterface};
+export type IsType = MethodsInterface & { Not: MethodsInterface };
 
 /**
  * Export all methods in Is object with Not object inside.
