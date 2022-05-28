@@ -1,12 +1,12 @@
-import {Methods, MethodsInterface} from '../methods';
+import { Methods, MethodsInterface } from '../methods';
 
 /**
  * Handler for reverse boolean result.
  */
 const NotHandler: any = {
-    apply(target: any, thisArg: any, args: any) {
-        return !target(...args);
-    },
+  apply(target: any, thisArg: any, args: any) {
+    return !target(...args);
+  },
 };
 
 /**
@@ -15,7 +15,7 @@ const NotHandler: any = {
  * @param item must by object with string key and any value
  */
 const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) => {
-    return Object.assign(object, item);
+  return Object.assign(object, item);
 };
 
 /**
@@ -23,7 +23,7 @@ const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) =
  * @param key mu by string
  */
 const map: any = (key: string) => {
-    return { [key]: new Proxy((Methods as any)[key], NotHandler) };
+  return { [key]: new Proxy((Methods as any)[key], NotHandler) };
 };
 
 /**
