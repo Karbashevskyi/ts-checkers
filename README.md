@@ -16,24 +16,26 @@
 - What kind of data can the library check?
   - Now is not more, but in the future the library will be growing.
   - List: 
-    - Is.Collection()
+    - Is.Boolean($variable)
+    - Is.Collection($variable)
       - For check if value is Array
-    - Is.Compare()
+    - Is.Compare($variable)
       - For compare two objects.
-    - Is.EmptyObject()
-    - Is.EmptyString()
-    - Is.False()
-    - Is.Null()
+    - Is.EmptyObject($variable)
+    - Is.EmptyString($variable)
+    - Is.False($variable)
+    - Is.Null($variable)
       - Check if null or "null" is null.
-    - Is.NullOrUndefined()
-    - Is.NullOrUndefinedOrEmpty()
-    - Is.Number()
-    - Is.Structure()
+    - Is.NullOrUndefined($variable)
+    - Is.NullOrUndefinedOrEmpty($variable)
+    - Is.Number($variable)
+    - Is.String($variable)
+    - Is.Structure($variable)
       - For check if value is Object
-    - Is.True()
-    - Is.Undefined()
+    - Is.True($variable)
+    - Is.Undefined($variable)
       - Check if undefined or "undefined" is undefined.
-    - Is.UniversalEmptyChecker()
+    - Is.UniversalEmptyChecker($variable)
       - The method is used inside other methods.
   - All the methods can be reverse result, just use prefix Not, Is.Not.Null().
 

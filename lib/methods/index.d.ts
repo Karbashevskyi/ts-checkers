@@ -11,10 +11,12 @@ import { Undefined } from './undefined';
 import { UniversalEmptyChecker } from './universal-empty-checker';
 import { Collection } from './collection';
 import { Structure } from './structure';
+import { String } from './string';
 /**
  * Declare names and types of methods
  */
 export interface MethodsInterface {
+    Boolean: typeof Boolean;
     Collection: typeof Collection;
     Compare: typeof Compare;
     EmptyObject: typeof EmptyObject;
@@ -24,6 +26,7 @@ export interface MethodsInterface {
     NullOrUndefined: typeof NullOrUndefined;
     NullOrUndefinedOrEmpty: typeof NullOrUndefinedOrEmpty;
     Number: typeof Number;
+    String: typeof String;
     Structure: typeof Structure;
     True: typeof True;
     Undefined: typeof Undefined;
