@@ -9,8 +9,8 @@ import { Number } from './number';
 import { True } from './true';
 import { Undefined } from './undefined';
 import { UniversalEmptyChecker } from './universal-empty-checker';
-import { Collection } from "./collection";
-import { Structure } from "./structure";
+import { Collection } from './collection';
+import { Structure } from './structure';
 /**
  * Declare names and types of methods
  */
