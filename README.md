@@ -81,3 +81,5 @@ import {Is} from "ts-checkers";
 [GitHub Profile](https://github.com/Karbashevskyi)
 
 [medium.com Profile](https://medium.com/@ivankarbashevskyi)
+
+[Pateron Profile](https://www.patreon.com/karbash)
