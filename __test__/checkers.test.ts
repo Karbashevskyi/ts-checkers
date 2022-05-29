@@ -19,17 +19,17 @@ describe('Testing Is. and Is.Not', () => {
         expect(Is.Null("unknown")).toBe(false);
     });
 
-    // Is.notNull
+    // Is.Not.Null
 
-    it('Is.notNull should be false for null', () => {
+    it('Is.Not.Null should be false for null', () => {
         expect(Is.Not.Null(arrWithDataToTest[0])).toBe(false);
     });
 
-    it('Is.notNull should be false for "null"', () => {
+    it('Is.Not.Null should be false for "null"', () => {
         expect(Is.Not.Null(arrWithDataToTest[2])).toBe(false);
     });
 
-    it('Is.notNull should be true for "unknown"', () => {
+    it('Is.Not.Null should be true for "unknown"', () => {
         expect(Is.Not.Null("unknown")).toBe(true);
     });
 
@@ -67,19 +67,19 @@ describe('Testing Is. and Is.Not', () => {
 
     //isNotNullOrUndefined
 
-    it('Is.notNullOrUndefined should be false (null)', () => {
+    it('Is.Not.NullOrUndefined should be false (null)', () => {
         expect(Is.Not.NullOrUndefined(arrWithDataToTest[0])).toBe(false);
     });
 
-    it('Is.notNullOrUndefined should be false (undefined)', () => {
+    it('Is.Not.NullOrUndefined should be false (undefined)', () => {
         expect(Is.Not.NullOrUndefined(arrWithDataToTest[1])).toBe(false);
     });
 
-    it('Is.notNullOrUndefined should be false ("null")', () => {
+    it('Is.Not.NullOrUndefined should be false ("null")', () => {
         expect(Is.Not.NullOrUndefined(arrWithDataToTest[2])).toBe(false);
     });
 
-    it('Is.notNullOrUndefined should be false ("undefined")', () => {
+    it('Is.Not.NullOrUndefined should be false ("undefined")', () => {
         expect(Is.Not.NullOrUndefined(arrWithDataToTest[3])).toBe(false);
     });
 
@@ -95,40 +95,40 @@ describe('Testing Is. and Is.Not', () => {
 
     // isNotNumber
 
-    it('Is.notNumber should be false (NaN)', () => {
+    it('Is.Not.Number should be false (NaN)', () => {
         expect(Is.Not.Number(NaN)).toBe(true);
     });
 
-    it('Is.notNumber should be false (0)', () => {
+    it('Is.Not.Number should be false (0)', () => {
         expect(Is.Not.Number(0)).toBe(false);
     });
 
-    it('Is.notNumber should be true ("0")', () => {
+    it('Is.Not.Number should be true ("0")', () => {
         expect(Is.Not.Number("0")).toBe(true);
     });
 
-    // Is.Collection
+    // Is.Array
 
-    it('Is.Collection should be true for []', () => {
-        expect(Is.Collection([])).toBe(true);
+    it('Is.Array should be true for []', () => {
+        expect(Is.Array([])).toBe(true);
     });
 
-    // Is.Not.Collection
+    // Is.Not.Array
 
-    it('Is.Not.Collection should be false for {}', () => {
-        expect(Is.Not.Collection({})).toBe(true);
+    it('Is.Not.Array should be false for {}', () => {
+        expect(Is.Not.Array({})).toBe(true);
     });
 
-    // Is.Structure
+    // Is.Object
 
-    it('Is.Structure should be true for {}', () => {
-        expect(Is.Structure({})).toBe(true);
+    it('Is.Object should be true for {}', () => {
+        expect(Is.Object({})).toBe(true);
     });
 
-    // Is.Not.Structure
+    // Is.Not.Object
 
-    it('Is.Not.Structure should be false for []', () => {
-        expect(Is.Not.Structure([])).toBe(true);
+    it('Is.Not.Object should be false for []', () => {
+        expect(Is.Not.Object([])).toBe(true);
     });
 
     // Is.Boolean

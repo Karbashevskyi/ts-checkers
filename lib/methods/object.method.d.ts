@@ -2,4 +2,4 @@
  * ObjectMethod is an Object
  * @param value is any type
  */
-export declare function Structure(value: any): boolean;
+export declare function ObjectMethod(value: any): boolean;

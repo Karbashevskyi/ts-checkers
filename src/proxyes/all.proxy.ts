@@ -5,7 +5,7 @@ type executeType = (...args: any[]) => boolean;
 
 /**
  * Handler for reverse boolean result.
- * Is.All.Boolean([true, true, 0], [true, [false]]); // Is false
+ * Is.All.BooleanMethod([true, true, 0], [true, [false]]); // Is false
  */
 const AllHandler: any = {
   apply(target: any, thisArg: any, argumentList: any[]) {

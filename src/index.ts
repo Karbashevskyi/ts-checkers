@@ -9,8 +9,8 @@ export type IsType = MethodsInterface & {
 
 /**
  * Export all methods in Is object with Not object inside.
- * If you need check if true is true, just use this: Is.True(value);
- * If you need check if true is not true just use this: Is.Not.True(value);
+ * If you need check if true is true, just use this: Is.TrueMethod(value);
+ * If you need check if true is not true just use this: Is.Not.TrueMethod(value);
  */
 export const Is: IsType = {
   ...Methods,

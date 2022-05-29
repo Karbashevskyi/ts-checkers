@@ -1,12 +1,12 @@
-import { NullOrUndefined } from './null-or-undefined';
+import { NullOrUndefinedMethod } from './null-or-undefined.method';
 import { Methods } from './index';
 
 /**
  * TODO add test
  * @param value is any type
  */
-export function UniversalEmptyChecker(value: any): boolean {
-  if (NullOrUndefined(value)) {
+export function UniversalEmptyCheckerMethod(value: any): boolean {
+  if (NullOrUndefinedMethod(value)) {
     return true;
   }
 

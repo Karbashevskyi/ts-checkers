@@ -1,4 +1,4 @@
-import { MethodsInterface } from "../methods";
+import { MethodsInterface } from '../methods';
 /**
  * Init const for reverse result of boolean.
  */

@@ -10,15 +10,26 @@
 [![](https://miro.medium.com/max/1400/1*Nr3ayecYqgKJwOqumJHXsw.jpeg)](https://medium.com/@ivankarbashevskyi/reduce-method-declarations-with-javascript-proxy-62fbfeeb4e12)
 [https://medium.com/@ivankarbashevskyi/reduce-method-declarations-with-javascript-proxy-62fbfeeb4e12](https://medium.com/@ivankarbashevskyi/reduce-method-declarations-with-javascript-proxy-62fbfeeb4e12)
 
+## Installation
+
+```bash
+$ npm install ts-checkers
+```
+
+## Import
+```typescript
+import {Is} from "ts-checkers";
+```
+
 ## This is library can help you to check some data.
 - Where you can use it?
   - In typescript or javascript.
 - What kind of data can the library check?
   - Now is not more, but in the future the library will be growing.
-  - List: 
+  - List:
+    - Is.Array($variable)
+    - Is.BigInt($variable)
     - Is.Boolean($variable)
-    - Is.Collection($variable)
-      - For check if value is Array
     - Is.Compare($variable)
       - For compare two objects.
     - Is.EmptyObject($variable)
@@ -30,8 +41,7 @@
     - Is.NullOrUndefinedOrEmpty($variable)
     - Is.Number($variable)
     - Is.String($variable)
-    - Is.Structure($variable)
-      - For check if value is Object
+    - Is.Object($variable)
     - Is.True($variable)
     - Is.Undefined($variable)
       - Check if undefined or "undefined" is undefined.

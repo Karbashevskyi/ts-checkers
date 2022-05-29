@@ -8,15 +8,15 @@ describe('Testing Is.All.', () => {
     const advancedBooleanArray: any[] = [true, false, booleanArray, [[booleanArray]]];
     const advancedNotBooleanArray: any[] = [...advancedBooleanArray, [[[0], '1', 'true', {}, []]]];
 
-    // Is.Boolean
+    // Is.BooleanMethod
 
-    it('Is.Boolean should be true for [true, false]', () => {
+    it('Is.BooleanMethod should be true for [true, false]', () => {
         expect(Is.All.Boolean(booleanArray)).toBe(true);
     });
 
-    // Is.Not.Boolean
+    // Is.Not.BooleanMethod
 
-    it('Is.All.Not.Boolean should be false for [true, false, 0]', () => {
+    it('Is.All.Not.BooleanMethod should be false for [true, false, 0]', () => {
         expect(Is.All.Not.Boolean(notBooleanArray)).toBe(true);
     });
 

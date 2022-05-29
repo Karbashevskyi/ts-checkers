@@ -1,57 +1,63 @@
-import { Compare } from './compare';
-import { EmptyObject } from './empty-object';
-import { EmptyString } from './empty-string';
-import { False } from './false';
-import { Null } from './null';
-import { NullOrUndefined } from './null-or-undefined';
-import { NullOrUndefinedOrEmpty } from './null-or-undefined-or-empty';
-import { Number } from './number';
-import { True } from './true';
-import { Undefined } from './undefined';
-import { UniversalEmptyChecker } from './universal-empty-checker';
-import { Collection } from './collection';
-import { Structure } from './structure';
-import { String } from './string';
-import { Boolean } from './boolean';
+import { CompareMethod } from './compare.method';
+import { EmptyObjectMethod } from './empty-object.method';
+import { EmptyStringMethod } from './empty-string.method';
+import { FalseMethod } from './false.method';
+import { NullMethod } from './null.method';
+import { NullOrUndefinedMethod } from './null-or-undefined.method';
+import { NullOrUndefinedOrEmptyMethod } from './null-or-undefined-or-empty.method';
+import { NumberMethod } from './number.method';
+import { TrueMethod } from './true.method';
+import { UndefinedMethod } from './undefined.method';
+import { UniversalEmptyCheckerMethod } from './universal-empty-checker.method';
+import { ArrayMethod } from './array.method';
+import { ObjectMethod } from './object.method';
+import { StringMethod } from './string.method';
+import { BooleanMethod } from './boolean.method';
+import { SymbolMethod } from './symbol.method';
+import { BigintMethod } from './bigint.method';
 
 /**
  * Declare names and types of methods
  */
 export interface MethodsInterface {
-  Boolean: typeof Boolean;
-  Collection: typeof Collection;
-  Compare: typeof Compare;
-  EmptyObject: typeof EmptyObject;
-  EmptyString: typeof EmptyString;
-  False: typeof False;
-  Null: typeof Null;
-  NullOrUndefined: typeof NullOrUndefined;
-  NullOrUndefinedOrEmpty: typeof NullOrUndefinedOrEmpty;
-  Number: typeof Number;
-  String: typeof String;
-  Structure: typeof Structure;
-  True: typeof True;
-  Undefined: typeof Undefined;
-  UniversalEmptyChecker: typeof UniversalEmptyChecker;
+  Array: typeof ArrayMethod;
+  BigInt: typeof BigintMethod;
+  Boolean: typeof BooleanMethod;
+  Compare: typeof CompareMethod;
+  EmptyObject: typeof EmptyObjectMethod;
+  EmptyString: typeof EmptyStringMethod;
+  False: typeof FalseMethod;
+  Null: typeof NullMethod;
+  NullOrUndefined: typeof NullOrUndefinedMethod;
+  NullOrUndefinedOrEmpty: typeof NullOrUndefinedOrEmptyMethod;
+  Number: typeof NumberMethod;
+  Object: typeof ObjectMethod;
+  String: typeof StringMethod;
+  Symbol: typeof SymbolMethod;
+  True: typeof TrueMethod;
+  Undefined: typeof UndefinedMethod;
+  UniversalEmptyChecker: typeof UniversalEmptyCheckerMethod;
 }
 
 /**
  * Export all accesses methods in library
  */
 export const Methods: MethodsInterface = {
-  Boolean,
-  Collection,
-  Compare,
-  EmptyObject,
-  EmptyString,
-  False,
-  Null,
-  NullOrUndefined,
-  NullOrUndefinedOrEmpty,
-  Number,
-  String,
-  Structure,
-  True,
-  Undefined,
-  UniversalEmptyChecker,
+  Array: ArrayMethod,
+  BigInt: BigintMethod,
+  Boolean: BooleanMethod,
+  Compare: CompareMethod,
+  EmptyObject: EmptyObjectMethod,
+  EmptyString: EmptyStringMethod,
+  False: FalseMethod,
+  Null: NullMethod,
+  NullOrUndefined: NullOrUndefinedMethod,
+  NullOrUndefinedOrEmpty: NullOrUndefinedOrEmptyMethod,
+  Number: NumberMethod,
+  String: StringMethod,
+  Object: ObjectMethod,
+  True: TrueMethod,
+  Symbol: SymbolMethod,
+  Undefined: UndefinedMethod,
+  UniversalEmptyChecker: UniversalEmptyCheckerMethod,
 };

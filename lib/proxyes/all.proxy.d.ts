@@ -1,4 +1,4 @@
-import { MethodsInterface } from "../methods";
+import { MethodsInterface } from '../methods';
 export declare type AllType = MethodsInterface & {
     Not: MethodsInterface;
 };

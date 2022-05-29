@@ -2,6 +2,6 @@
  *
  * @param value is any type
  */
-export function Null(value: any): boolean {
+export function NullMethod(value: any): boolean {
   return [null, 'null'].includes(value);
 }
