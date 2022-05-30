@@ -1,5 +1,5 @@
 /**
- * TODO add test
+ *
  * @param value is boolean type
  */
 export function FalseMethod(value: boolean): boolean {

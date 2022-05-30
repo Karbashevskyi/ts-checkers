@@ -1,4 +1,6 @@
-import { Methods, MethodsInterface } from '../methods';
+import {MethodsInterface} from '../methods';
+
+let allMethods: MethodsInterface;
 
 /**
  * Handler for reverse boolean result.
@@ -23,10 +25,13 @@ const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) =
  * @param key mu by string
  */
 const map: any = (key: string) => {
-  return { [key]: new Proxy((Methods as any)[key], NotHandler) };
+  return { [key]: new Proxy((allMethods as any)[key], NotHandler) };
 };
 
 /**
  * Init const for reverse result of boolean.
  */
-export const Not: MethodsInterface = Object.keys(Methods).map(map).reduce(reduce, {}) as MethodsInterface;
+export const BuildNot = (methodsList: MethodsInterface) => {
+  allMethods = methodsList;
+  return Object.keys(methodsList).map(map).reduce(reduce, {}) as MethodsInterface;
+};

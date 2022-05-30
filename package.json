@@ -43,5 +43,23 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.6.3",
     "codelyzer": "^6.0.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "<rootDir>/.git/",
+      "<rootDir>/.DS_Store/",
+      "<rootDir>/.vs/",
+      "<rootDir>/.vscode/",
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "<rootDir>/tsconfig.json",
+        "stringifyContentPathRegex": "\\.html$"
+      }
+    }
   }
 }

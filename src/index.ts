@@ -1,6 +1,6 @@
-import { Methods, MethodsInterface } from './methods';
-import { Not } from './proxyes/not.proxy';
-import { All, AllType } from './proxyes/all.proxy';
+import {Methods, MethodsInterface} from './methods';
+import {BuildNot} from './proxyes/not.proxy';
+import {All, AllType} from './proxyes/all.proxy';
 
 export type IsType = MethodsInterface & {
   Not: MethodsInterface;
@@ -14,6 +14,6 @@ export type IsType = MethodsInterface & {
  */
 export const Is: IsType = {
   ...Methods,
-  Not,
+  Not: BuildNot(Methods),
   All,
 };

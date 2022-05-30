@@ -1,5 +1,5 @@
-import { Methods, MethodsInterface } from '../methods';
-import { Not } from './not.proxy';
+import {Methods, MethodsInterface} from '../methods';
+import {BuildNot} from './not.proxy';
 
 type executeType = (...args: any[]) => boolean;
 
@@ -11,7 +11,7 @@ const AllHandler: any = {
   apply(target: any, thisArg: any, argumentList: any[]) {
     const execute: executeType = (...args: any[]): boolean => {
       return args.every((argument: any): boolean => {
-        if (Array.isArray(argument)) {
+        if (Array.isArray(argument) && argument?.length) {
           return execute(...argument);
         }
         return target(argument);
@@ -43,10 +43,12 @@ export type AllType = MethodsInterface & {
   Not: MethodsInterface;
 };
 
+const allMethods: MethodsInterface = Object.keys(Methods).map(map).reduce(reduce, {}) as MethodsInterface;
+
 /**
  * Init const for reverse result of boolean.
  */
 export const All: AllType = {
-  ...(Object.keys(Methods).map(map).reduce(reduce, {}) as MethodsInterface),
-  Not,
+  ...allMethods,
+  Not: BuildNot(allMethods),
 };
