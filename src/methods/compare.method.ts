@@ -1,5 +1,5 @@
-import {NullOrUndefinedMethod} from './null-or-undefined.method';
-import {Is} from '../index';
+import { NullOrUndefinedMethod } from './null-or-undefined.method';
+import { Is } from '../index';
 
 export enum TypeOfValueEnum {
   object = 'object',

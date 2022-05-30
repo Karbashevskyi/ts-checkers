@@ -1,5 +1,5 @@
-import {NullOrUndefinedMethod} from './null-or-undefined.method';
-import {Methods} from './index';
+import { NullOrUndefinedMethod } from './null-or-undefined.method';
+import { Methods } from './index';
 
 /**
  *

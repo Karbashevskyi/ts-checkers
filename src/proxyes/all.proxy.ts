@@ -1,5 +1,5 @@
-import {Methods, MethodsInterface} from '../methods';
-import {BuildNot} from './not.proxy';
+import { Methods, MethodsInterface } from '../methods';
+import { BuildNot } from './not.proxy';
 
 type executeType = (...args: any[]) => boolean;
 
