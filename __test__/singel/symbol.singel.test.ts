@@ -54,7 +54,16 @@ describe('Symbol singel', () => {
         },
         {
             value: () => {}
-        }
+        },
+        {
+            value: BigInt
+        },
+        {
+            value: Symbol
+        },
+        {
+            value: NaN
+        },
     ];
 
     it.each(dataForGoodTesting)('Is.Symbol: Should true for $value', ({value}) => {

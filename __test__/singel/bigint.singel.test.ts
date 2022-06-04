@@ -54,7 +54,16 @@ describe('BigInt singel', () => {
         },
         {
             value: () => {}
-        }
+        },
+        {
+            value: BigInt
+        },
+        {
+            value: Symbol
+        },
+        {
+            value: NaN
+        },
     ];
 
     it.each(dataForGoodTesting)('Is.BigInt: Should true for $value', ({value}) => {

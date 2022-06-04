@@ -1,11 +1,14 @@
 import {Is} from '../../lib';
 
 
-describe('Array singel', () => {
+describe('Null or Undefined singel', () => {
 
     const dataForGoodTesting: {value: any}[] = [
         {
-            value: []
+            value: undefined
+        },
+        {
+            value: null
         },
     ];
 
@@ -17,16 +20,19 @@ describe('Array singel', () => {
             value: 'null'
         },
         {
-            value: Symbol()
-        },
-        {
             value: true
         },
         {
-            value: false
+            value: Symbol()
         },
         {
             value: BigInt(1)
+        },
+        {
+            value: []
+        },
+        {
+            value: false
         },
         {
             value: ""
@@ -42,12 +48,6 @@ describe('Array singel', () => {
         },
         {
             value: 0
-        },
-        {
-            value: null
-        },
-        {
-            value: undefined
         },
         {
             value: Function
@@ -66,20 +66,20 @@ describe('Array singel', () => {
         },
     ];
 
-    it.each(dataForGoodTesting)('Is.Array: Should true for $value', ({value}) => {
-        expect(Is.Array(value)).toBe(true);
+    it.each(dataForGoodTesting)('Is.NullOrUndefined: Should true for $value', ({value}) => {
+        expect(Is.NullOrUndefined(value)).toBe(true);
     });
 
-    it.each(dataForBadTesting)('Is.Array: Should false for $value', ({value}) => {
-        expect(Is.Array(value)).toBe(false);
+    it.each(dataForBadTesting)('Is.NullOrUndefined: Should false for $value', ({value}) => {
+        expect(Is.NullOrUndefined(value)).toBe(false);
     });
 
-    it.each(dataForGoodTesting)('Is.Not.Array: Should false for $value', ({value}) => {
-        expect(Is.Not.Array(value)).toBe(false);
+    it.each(dataForGoodTesting)('Is.Not.NullOrUndefined: Should false for $value', ({value}) => {
+        expect(Is.Not.NullOrUndefined(value)).toBe(false);
     });
 
-    it.each(dataForBadTesting)('Is.Not.Array: Should true for $value', ({value}) => {
-        expect(Is.Not.Array(value)).toBe(true);
+    it.each(dataForBadTesting)('Is.Not.NullOrUndefined: Should true for $value', ({value}) => {
+        expect(Is.Not.NullOrUndefined(value)).toBe(true);
     });
 
 });

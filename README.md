@@ -35,6 +35,7 @@ import {Is} from "ts-checkers";
     - Is.EmptyObject($variable)
     - Is.EmptyString($variable)
     - Is.False($variable)
+    - Is.Function($variable)
     - Is.Null($variable)
       - Check if null or "null" is null.
     - Is.NullOrUndefined($variable)
@@ -61,6 +62,21 @@ import {Is} from "ts-checkers";
     Is.Not.Number("0") // Return true
     Is.Not.Number(NaN) // Return true
     Is.Number(NaN) // Return false
+    
+    // Why do you need to use the package?
+    // because you don't want to write like this:
+    if (
+            typeof variable === 'object' &&
+            variable !== null &&
+            !Array.isArray(variable)
+    ) {
+        
+    }
+    
+    // but you want to write like this:
+    if (Is.Object(variable)) {
+        
+    }
 
 ```
 

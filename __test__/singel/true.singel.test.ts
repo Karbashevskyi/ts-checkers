@@ -54,7 +54,16 @@ describe('True singel', () => {
         },
         {
             value: () => {}
-        }
+        },
+        {
+            value: BigInt
+        },
+        {
+            value: Symbol
+        },
+        {
+            value: NaN
+        },
     ];
 
     it.each(dataForGoodTesting)('Is.True: Should true for $value', ({value}) => {

@@ -1,13 +1,13 @@
 export const dataForGoodTesting: {value: any[]}[] = [
     {
-        value: ['undefined']
-    },
-    {
         value: [undefined]
     },
 ];
 
 export const dataForBadTesting: {value: any[]}[] = [
+    {
+        value: ['undefined']
+    },
     {
         value: [true]
     },
@@ -55,7 +55,16 @@ export const dataForBadTesting: {value: any[]}[] = [
     },
     {
         value: [() => {}]
-    }
+    },
+    {
+        value: [BigInt]
+    },
+    {
+        value: [Symbol]
+    },
+    {
+        value: [NaN]
+    },
 ];
 
 export const advancedDataForBadTesting: {value: any[]}[] = dataForBadTesting.map((object: {value: any[]}) => {

@@ -7,12 +7,12 @@ describe('Undefined singel', () => {
         {
             value: undefined
         },
-        {
-            value: 'undefined'
-        },
     ];
 
     const dataForBadTesting: {value: any}[] = [
+        {
+            value: 'undefined'
+        },
         {
             value: 'null'
         },
@@ -54,7 +54,13 @@ describe('Undefined singel', () => {
         },
         {
             value: () => {}
-        }
+        },
+        {
+            value: BigInt
+        },
+        {
+            value: Symbol
+        },
     ];
 
     it.each(dataForGoodTesting)('Is.Undefined: Should true for $value', ({value}) => {

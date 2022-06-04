@@ -1,10 +1,31 @@
 export const dataForGoodTesting: {value: any[]}[] = [
     {
-        value: [true]
+        value: [Function]
+    },
+    {
+        value: [() => {}]
+    },
+    {
+        value: [BigInt]
+    },
+    {
+        value: [Symbol]
     },
 ];
 
 export const dataForBadTesting: {value: any[]}[] = [
+    {
+        value: ['null']
+    },
+    {
+        value: ['undefined']
+    },
+    {
+        value: [undefined]
+    },
+    {
+        value: [true]
+    },
     {
         value: [BigInt(1)]
     },
@@ -16,12 +37,6 @@ export const dataForBadTesting: {value: any[]}[] = [
     },
     {
         value: [false, true]
-    },
-    {
-        value: ['undefined']
-    },
-    {
-        value: ['null']
     },
     {
         value: [Symbol()]
@@ -42,25 +57,10 @@ export const dataForBadTesting: {value: any[]}[] = [
         value: [0]
     },
     {
-        value: [null]
-    },
-    {
-        value: [undefined]
-    },
-    {
         value: [[]]
     },
     {
-        value: [Function]
-    },
-    {
-        value: [() => {}]
-    },
-    {
-        value: [BigInt]
-    },
-    {
-        value: [Symbol]
+        value: [null]
     },
     {
         value: [NaN]

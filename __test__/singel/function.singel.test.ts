@@ -5,8 +5,20 @@ describe('Null singel', () => {
 
     const dataForGoodTesting: {value: any}[] = [
         {
-            value: null
+            value: Object.keys
         },
+        {
+            value: Symbol
+        },
+        {
+            value: BigInt
+        },
+        {
+            value: Function
+        },
+        {
+            value: () => {}
+        }
     ];
 
     const dataForBadTesting: {value: any}[] = [
@@ -50,36 +62,27 @@ describe('Null singel', () => {
             value: undefined
         },
         {
-            value: Function
-        },
-        {
-            value: () => {}
-        },
-        {
-            value: BigInt
-        },
-        {
-            value: Symbol
+            value: null
         },
         {
             value: NaN
         },
     ];
 
-    it.each(dataForGoodTesting)('Is.Null: Should true for $value', ({value}) => {
-        expect(Is.Null(value)).toBe(true);
+    it.each(dataForGoodTesting)('Is.Function: Should true for $value', ({value}) => {
+        expect(Is.Function(value)).toBe(true);
     });
 
-    it.each(dataForBadTesting)('Is.Null: Should false for $value', ({value}) => {
-        expect(Is.Null(value)).toBe(false);
+    it.each(dataForBadTesting)('Is.Function: Should false for $value', ({value}) => {
+        expect(Is.Function(value)).toBe(false);
     });
 
-    it.each(dataForGoodTesting)('Is.Not.Null: Should false for $value', ({value}) => {
-        expect(Is.Not.Null(value)).toBe(false);
+    it.each(dataForGoodTesting)('Is.Not.Function: Should false for $value', ({value}) => {
+        expect(Is.Not.Function(value)).toBe(false);
     });
 
-    it.each(dataForBadTesting)('Is.Not.Null: Should true for $value', ({value}) => {
-        expect(Is.Not.Null(value)).toBe(true);
+    it.each(dataForBadTesting)('Is.Not.Function: Should true for $value', ({value}) => {
+        expect(Is.Not.Function(value)).toBe(true);
     });
 
 });
