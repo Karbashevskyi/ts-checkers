@@ -9,7 +9,6 @@ import {FunctionMethod} from './function.method';
  * @param value is any type
  */
 export function UniversalEmptyCheckerMethod(value: any): boolean {
-
   // if is null or undefined is empty
   if (NullOrUndefinedMethod(value)) {
     return true;
@@ -36,5 +35,4 @@ export function UniversalEmptyCheckerMethod(value: any): boolean {
   }
 
   return Object.keys(value)?.length === 0;
-
 }
