@@ -1,7 +1,7 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function BooleanMethod(value: any): boolean {
-  return typeof value === 'boolean';
+export function BooleanMethod(argument: any): argument is boolean {
+  return typeof argument === 'boolean';
 }

@@ -1,5 +1,5 @@
 /**
  *
- * @param value is object type
+ * @param argument is object type
  */
-export declare function EmptyObjectMethod(value: object): boolean;
+export declare function EmptyObjectMethod(argument: object): boolean;

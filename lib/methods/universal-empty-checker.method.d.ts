@@ -1,5 +1,5 @@
 /**
  * Empty is: '', null, undefined, {}, NaN, Symbol(), [].
- * @param value is any type
+ * @param argument is any type
  */
-export declare function UniversalEmptyCheckerMethod(value: any): boolean;
+export declare function UniversalEmptyCheckerMethod(argument: any): boolean;

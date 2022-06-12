@@ -1,7 +1,7 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function SymbolMethod(value: any): boolean {
-  return typeof value === 'symbol';
+export function SymbolMethod(argument: any): argument is symbol {
+  return typeof argument === 'symbol';
 }

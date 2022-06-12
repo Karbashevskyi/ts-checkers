@@ -30,7 +30,9 @@
     "Check Data",
     "TypeScript",
     "TS",
-    "Checkers"
+    "Proxy",
+    "Checkers",
+    "Testing"
   ],
   "author": "Ivan Karbashevskyi",
   "license": "MIT",

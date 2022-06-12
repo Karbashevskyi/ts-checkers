@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function NullOrUndefinedOrEmptyMethod(value: any): boolean;
+export declare function NullOrUndefinedOrEmptyMethod(argument: any): boolean;

@@ -1,7 +1,7 @@
 /**
  * Collection is an Array
- * @param value is any type
+ * @param argument is any type
  */
-export function ArrayMethod(value: any): boolean {
-  return Array.isArray(value);
+export function ArrayMethod(argument: any): argument is any[] {
+  return Array.isArray(argument);
 }

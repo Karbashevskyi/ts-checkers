@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function NumberMethod(value: any): boolean;
+export declare function NumberMethod(argument: any): argument is number;

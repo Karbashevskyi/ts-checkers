@@ -1,5 +1,6 @@
-import { Methods, MethodsInterface } from '../methods';
-import { BuildNot } from './not.proxy';
+import {Methods, MethodsInterface} from '../methods';
+import {BuildNot} from './not.proxy';
+import {ConvertTool} from '../tools/convert.tool';
 
 type executeType = (...args: any[]) => boolean;
 
@@ -22,28 +23,11 @@ const AllHandler: any = {
   },
 };
 
-/**
- *
- * @param object must by object with string key and any value
- * @param item must by object with string key and any value
- */
-const reduce: any = (object: { [p: string]: any }, item: { [p: string]: any }) => {
-  return Object.assign(object, item);
-};
-
-/**
- *
- * @param key mu by string
- */
-const map: any = (key: string) => {
-  return { [key]: new Proxy((Methods as any)[key], AllHandler) };
-};
-
 export type AllType = MethodsInterface & {
   Not: MethodsInterface;
 };
 
-const allMethods: MethodsInterface = Object.keys(Methods).map(map).reduce(reduce, {}) as MethodsInterface;
+const allMethods: MethodsInterface = ConvertTool.ToProxy.getResult<MethodsInterface>(AllHandler, Methods);
 
 /**
  * Init const for reverse result of boolean.

@@ -1,9 +1,9 @@
-import { UniversalEmptyCheckerMethod } from './universal-empty-checker.method';
+import {UniversalEmptyCheckerMethod} from './universal-empty-checker.method';
 
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function NullOrUndefinedOrEmptyMethod(value: any): boolean {
-  return UniversalEmptyCheckerMethod(value);
+export function NullOrUndefinedOrEmptyMethod(argument: any): boolean {
+  return UniversalEmptyCheckerMethod(argument);
 }

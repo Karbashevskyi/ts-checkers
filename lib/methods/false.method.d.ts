@@ -1,5 +1,5 @@
 /**
  *
- * @param value is boolean type
+ * @param argument is boolean type
  */
-export declare function FalseMethod(value: boolean): boolean;
+export declare function FalseMethod(argument: boolean): argument is false;

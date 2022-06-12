@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function StringMethod(value: any): boolean;
+export declare function StringMethod(argument: any): argument is string;

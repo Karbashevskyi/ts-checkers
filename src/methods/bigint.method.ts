@@ -1,7 +1,7 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function BigintMethod(value: any): boolean {
-  return typeof value === 'bigint';
+export function BigintMethod(argument: any): argument is BigInteger {
+  return typeof argument === 'bigint';
 }

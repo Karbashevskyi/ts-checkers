@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function NullMethod(value: any): boolean;
+export declare function NullMethod(argument: any): argument is null;

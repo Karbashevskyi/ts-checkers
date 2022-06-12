@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function SymbolMethod(value: any): boolean;
+export declare function SymbolMethod(argument: any): argument is symbol;

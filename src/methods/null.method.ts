@@ -1,7 +1,7 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function NullMethod(value: any): boolean {
-  return value === null;
+export function NullMethod(argument: any): argument is null {
+  return argument === null;
 }

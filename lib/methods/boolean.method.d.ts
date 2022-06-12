@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function BooleanMethod(value: any): boolean;
+export declare function BooleanMethod(argument: any): argument is boolean;

@@ -1,6 +1,6 @@
 /**
- * @param value is any type
+ * @param argument is any type
  */
-export function FunctionMethod(value: any): boolean {
-  return typeof value === 'function';
+export function FunctionMethod(argument: any): argument is '[object Function]' {
+  return {}.toString.call(argument) === '[object Function]';
 }

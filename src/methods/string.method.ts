@@ -1,7 +1,7 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function StringMethod(value: any): boolean {
-  return typeof value === 'string';
+export function StringMethod(argument: any): argument is string {
+  return typeof argument === 'string';
 }

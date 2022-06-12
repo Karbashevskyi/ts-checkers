@@ -1,38 +1,38 @@
-import { NullOrUndefinedMethod } from './null-or-undefined.method';
-import { BooleanMethod } from './boolean.method';
-import { NumberMethod } from './number.method';
-import { BigintMethod } from './bigint.method';
-import { FunctionMethod } from './function.method';
+import {NullOrUndefinedMethod} from './null-or-undefined.method';
+import {BooleanMethod} from './boolean.method';
+import {NumberMethod} from './number.method';
+import {BigintMethod} from './bigint.method';
+import {FunctionMethod} from './function.method';
 
 /**
  * Empty is: '', null, undefined, {}, NaN, Symbol(), [].
- * @param value is any type
+ * @param argument is any type
  */
-export function UniversalEmptyCheckerMethod(value: any): boolean {
+export function UniversalEmptyCheckerMethod(argument: any): boolean {
   // if is null or undefined is empty
-  if (NullOrUndefinedMethod(value)) {
+  if (NullOrUndefinedMethod(argument)) {
     return true;
   }
 
-  // If value is boolean when is not empty
-  if (BooleanMethod(value)) {
+  // If argument is boolean when is not empty
+  if (BooleanMethod(argument)) {
     return false;
   }
 
-  // If value is number when is not empty
-  if (NumberMethod(value)) {
+  // If argument is number when is not empty
+  if (NumberMethod(argument)) {
     return false;
   }
 
-  // If value is BigInt when is not empty
-  if (BigintMethod(value)) {
+  // If argument is BigInt when is not empty
+  if (BigintMethod(argument)) {
     return false;
   }
 
-  // If value is Function when is not empty
-  if (FunctionMethod(value)) {
+  // If argument is Function when is not empty
+  if (FunctionMethod(argument)) {
     return false;
   }
 
-  return Object.keys(value)?.length === 0;
+  return Object.keys(argument)?.length === 0;
 }

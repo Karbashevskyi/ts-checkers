@@ -1,5 +1,5 @@
 /**
  * Collection is an Array
- * @param value is any type
+ * @param argument is any type
  */
-export declare function ArrayMethod(value: any): boolean;
+export declare function ArrayMethod(argument: any): argument is any[];

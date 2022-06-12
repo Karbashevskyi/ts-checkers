@@ -1,5 +1,5 @@
 /**
  *
- * @param value is string type
+ * @param argument is string type
  */
-export declare function EmptyStringMethod(value: string): boolean;
+export declare function EmptyStringMethod(argument: string): boolean;

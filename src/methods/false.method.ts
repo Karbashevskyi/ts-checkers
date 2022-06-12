@@ -1,7 +1,7 @@
 /**
  *
- * @param value is boolean type
+ * @param argument is boolean type
  */
-export function FalseMethod(value: boolean): boolean {
-  return value === false;
+export function FalseMethod(argument: boolean): argument is false {
+  return argument === false;
 }

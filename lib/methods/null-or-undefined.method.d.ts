@@ -1,1 +1,1 @@
-export declare function NullOrUndefinedMethod(value: any): boolean;
+export declare function NullOrUndefinedMethod(argument: any): boolean;

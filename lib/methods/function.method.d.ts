@@ -1,4 +1,4 @@
 /**
- * @param value is any type
+ * @param argument is any type
  */
-export declare function FunctionMethod(value: any): boolean;
+export declare function FunctionMethod(argument: any): argument is '[object Function]';

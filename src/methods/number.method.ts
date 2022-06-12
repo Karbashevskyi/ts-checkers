@@ -1,7 +1,7 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export function NumberMethod(value: any): boolean {
-  return typeof value === 'number' && !isNaN(value);
+export function NumberMethod(argument: any): argument is number {
+  return typeof argument === 'number' && !isNaN(argument);
 }

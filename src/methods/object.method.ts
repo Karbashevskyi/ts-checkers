@@ -1,9 +1,9 @@
-import { Is } from '../index';
+import {Is} from '../index';
 
 /**
  * ObjectMethod is an Object
- * @param value is any type
+ * @param argument is any type
  */
-export function ObjectMethod(value: any): boolean {
-  return typeof value === 'object' && Is.Not.Array(value) && Is.Not.Null(value);
+export function ObjectMethod(argument: any): argument is object {
+  return typeof argument === 'object' && Is.Not.Array(argument) && Is.Not.Null(argument);
 }

@@ -1,5 +1,5 @@
 /**
  *
- * @param value is any type
+ * @param argument is any type
  */
-export declare function BigintMethod(value: any): boolean;
+export declare function BigintMethod(argument: any): argument is BigInteger;

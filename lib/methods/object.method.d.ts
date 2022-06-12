@@ -1,5 +1,5 @@
 /**
  * ObjectMethod is an Object
- * @param value is any type
+ * @param argument is any type
  */
-export declare function ObjectMethod(value: any): boolean;
+export declare function ObjectMethod(argument: any): argument is object;

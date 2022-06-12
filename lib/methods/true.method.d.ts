@@ -1,5 +1,5 @@
 /**
  *
- * @param value is boolean type
+ * @param argument is boolean type
  */
-export declare function TrueMethod(value: boolean): boolean;
+export declare function TrueMethod(argument: boolean): argument is true;
