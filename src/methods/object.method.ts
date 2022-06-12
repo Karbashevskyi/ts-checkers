@@ -1,4 +1,4 @@
-import {Is} from '../index';
+import { Is } from '../index';
 
 /**
  * ObjectMethod is an Object

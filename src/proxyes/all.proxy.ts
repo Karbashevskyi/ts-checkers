@@ -1,6 +1,6 @@
-import {Methods, MethodsInterface} from '../methods';
-import {BuildNot} from './not.proxy';
-import {ConvertTool} from '../tools/convert.tool';
+import { Methods, MethodsInterface } from '../methods';
+import { BuildNot } from './not.proxy';
+import { ConvertTool } from '../tools/convert.tool';
 
 type executeType = (...args: any[]) => boolean;
 

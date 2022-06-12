@@ -1,5 +1,5 @@
-import {MethodsInterface} from '../methods';
-import {ConvertTool} from '../tools/convert.tool';
+import { MethodsInterface } from '../methods';
+import { ConvertTool } from '../tools/convert.tool';
 
 /**
  * Handler for reverse boolean result.
