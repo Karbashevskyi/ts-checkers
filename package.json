@@ -1,6 +1,6 @@
 {
   "name": "ts-checkers",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "The package for check some data in typescript.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
